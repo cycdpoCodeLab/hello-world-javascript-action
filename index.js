@@ -1,10 +1,12 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
+const path = require('path');
 
 const run = async () => {
   {
-    // Log ls -l
-    const {stdout, stderr} = await exec('npm ci --only=prod');
+    const {stdout, stderr} = await exec('npm ci --only=prod', {
+      cwd: path.join(__dirname)
+    });
     console.log(stdout);
     if (stderr) {
       return Promise.reject(stderr);
