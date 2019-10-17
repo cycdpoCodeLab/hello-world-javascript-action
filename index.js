@@ -3,9 +3,15 @@ const exec = util.promisify(require('child_process').exec);
 const path = require('path');
 
 const run = async () => {
+  // Logs
+  const process_cwd = path.resolve(process.env['RUNNER_TEMP'] || process.cwd());
+  const npmrcPath = path.resolve(process_cwd, '.npmrc');
+  console.log(`.npmrc: ${npmrcPath}`);
+
+  // Install Dependencies
   {
     const {stdout, stderr} = await exec('npm ci --only=prod', {
-      cwd: path.join(__dirname)
+      cwd: process_cwd
     });
     console.log(stdout);
     if (stderr) {
