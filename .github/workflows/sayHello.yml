@@ -9,4 +9,6 @@ jobs:
       - name: Say Hello
         uses: cycjimmy/hello-world-javascript-action@master
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet:
+            - 'Mona the Octocat'
+            - 'Geoffrey.C'
