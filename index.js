@@ -8,8 +8,30 @@ const run = async () => {
   const npmrcPath = path.resolve(process_cwd, '.npmrc');
   const nowPath = path.resolve(__dirname);
   console.log(`process_cwd: ${process_cwd}`);
+
+  {
+    const {stdout, stderr} = await exec('ls -l', {
+      cwd: process_cwd
+    });
+    console.log(stdout);
+    if (stderr) {
+      return Promise.reject(stderr);
+    }
+  }
+
   console.log(`.npmrc: ${npmrcPath}`);
   console.log(`nowPath: ${nowPath}`);
+
+  {
+    const {stdout, stderr} = await exec('ls -l', {
+      cwd: nowPath
+    });
+    console.log(stdout);
+    if (stderr) {
+      return Promise.reject(stderr);
+    }
+  }
+
 
   // Install Dependencies
   {
