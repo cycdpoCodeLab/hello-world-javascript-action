@@ -6,12 +6,15 @@ const run = async () => {
   // Logs
   const process_cwd = path.resolve(process.env['RUNNER_TEMP'] || process.cwd());
   const npmrcPath = path.resolve(process_cwd, '.npmrc');
+  const nowPath = path.resolve(__dirname);
+  console.log(`process_cwd: ${process_cwd}`);
   console.log(`.npmrc: ${npmrcPath}`);
+  console.log(`nowPath: ${nowPath}`);
 
   // Install Dependencies
   {
     const {stdout, stderr} = await exec('npm ci --only=prod', {
-      cwd: process_cwd
+      cwd: nowPath
     });
     console.log(stdout);
     if (stderr) {
