@@ -10,10 +10,21 @@ module.exports = () => {
       const testFalseInput1 = core.getInput('test-false-input1', {required: false}) || '';
       const testFalseInput2 = core.getInput('test-false-input2', {required: false}) || '';
 
-      console.log(`testTrueInput1: ${testTrueInput1}`, testTrueInput1 === true);
+      console.log(`testTrueInput1: ${testTrueInput1}`);
+      console.log(`testTrueInput1 === true: ${testTrueInput1 === true}`);
+      console.log(`testTrueInput1 === 'true': ${testTrueInput1 === 'true'}`);
+
       console.log(`testTrueInput2: ${testTrueInput2}`, testTrueInput2 === true);
+      console.log(`testTrueInput2 === true: ${testTrueInput2 === true}`);
+      console.log(`testTrueInput2 === 'true': ${testTrueInput2 === 'true'}`);
+
       console.log(`testFalseInput1: ${testFalseInput1}`, testFalseInput1 === false);
+      console.log(`testFalseInput1 === false: ${testFalseInput1 === false}`);
+      console.log(`testFalseInput1 === 'false': ${testFalseInput1 === 'false'}`);
+
       console.log(`testFalseInput2: ${testFalseInput2}`, testFalseInput2 === false);
+      console.log(`testFalseInput2 === false: ${testFalseInput2 === false}`);
+      console.log(`testFalseInput2 === 'false': ${testFalseInput2 === 'false'}`);
     }
 
 
