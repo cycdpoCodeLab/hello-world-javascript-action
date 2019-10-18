@@ -5,6 +5,14 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  test-true-input1:
+    description: 'test'
+  test-true-input2:
+    description: 'test'
+  test-false-input1:
+    description: 'test'
+  test-false-input2:
+    description: 'test'
 outputs:
   time: # id of output
     description: 'The time we we greeted you'

@@ -3,6 +3,20 @@ const github = require('@actions/github');
 
 module.exports = () => {
   try {
+    {
+      // test boolean input
+      const testTrueInput1 = core.getInput('test-true-input1', {required: false}) || '';
+      const testTrueInput2 = core.getInput('test-true-input2', {required: false}) || '';
+      const testFalseInput1 = core.getInput('test-false-input1', {required: false}) || '';
+      const testFalseInput2 = core.getInput('test-false-input2', {required: false}) || '';
+
+      console.log(`testTrueInput1: ${testTrueInput1}`, testTrueInput1 === true);
+      console.log(`testTrueInput2: ${testTrueInput2}`, testTrueInput2 === true);
+      console.log(`testFalseInput1: ${testFalseInput1}`, testFalseInput1 === false);
+      console.log(`testFalseInput2: ${testFalseInput2}`, testFalseInput2 === false);
+    }
+
+
     // `who-to-greet` input defined in action metadata file
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Hello ${nameToGreet

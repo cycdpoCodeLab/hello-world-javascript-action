@@ -12,3 +12,6 @@ jobs:
           who-to-greet: |
             'Mona the Octocat'
             'Geoffrey.C'
+          test-true-input1: 'true'
+          test-true-input2: true
+          test-false-input1: false
