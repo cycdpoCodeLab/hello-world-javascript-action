@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cycjimmy/hello-world-javascript-action.git"
+    "url": "git+https://github.com/cycdpoCodeLab/hello-world-javascript-action.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cycjimmy/hello-world-javascript-action/issues"
+    "url": "https://github.com/cycdpoCodeLab/hello-world-javascript-action/issues"
   },
-  "homepage": "https://github.com/cycjimmy/hello-world-javascript-action#readme",
+  "homepage": "https://github.com/cycdpoCodeLab/hello-world-javascript-action#readme",
   "dependencies": {
     "@actions/core": "^1.1.3",
     "@actions/github": "^1.1.0"
